@@ -1,10 +1,24 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Lingua-EN-Numbers-Ordinate
-version:      1.02
-version_from: lib/Lingua/EN/Numbers/Ordinate.pm
-installdirs:  site
+---
+abstract: 'go from cardinal number (3) to ordinal ("3rd")'
+author:
+  - 'Sean Burke <sburke@bowers.com>'
+build_requires:
+  Test::More: '0.88'
+configure_requires:
+  ExtUtils::MakeMaker: '6.30'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.016, CPAN::Meta::Converter version 2.141170'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Lingua-EN-Numbers-Ordinate
 requires:
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.17
+  Exporter: '0'
+  perl: '5.006'
+  strict: '0'
+  warnings: '0'
+resources:
+  homepage: https://github.com/neilbowers/Lingua-EN-Numbers-Ordinate
+  repository: https://github.com/neilbowers/Lingua-EN-Numbers-Ordinate.git
+version: 1.02_01

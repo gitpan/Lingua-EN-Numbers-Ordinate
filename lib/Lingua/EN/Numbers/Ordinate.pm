@@ -1,14 +1,15 @@
-
-require 5;
 package Lingua::EN::Numbers::Ordinate;
+$Lingua::EN::Numbers::Ordinate::VERSION = '1.02_01';
+# ABSTRACT: go from cardinal number (3) to ordinal ("3rd")
+
+use 5.006;
 use strict;
-# Time-stamp: "2004-12-29 19:06:20 AST"
-use vars qw(@ISA @EXPORT @EXPORT_OK $VERSION);
+use warnings;
 require Exporter;
-@ISA = ('Exporter');
-@EXPORT = ('ordinate');
-@EXPORT_OK = ('ordsuf', 'th');
-$VERSION = "1.02";
+
+our @ISA        = qw/ Exporter  /;
+our @EXPORT     = qw/ ordinate  /;
+our @EXPORT_OK  = qw/ ordsuf th /;
 
 ###########################################################################
 
@@ -133,6 +134,18 @@ Damian Conway's I<Object Oriented Perl> from Manning Press.
 
 Kinda makes you like C<th(3)>, doesn't it?
 
+=head1 SEE ALSO
+
+L<Lingua::EN::Inflect> provides an C<ORD> function,
+which returns the ordinal form of a cardinal number.
+
+L<Lingua::EN::Number::IsOrdinal> provides an C<is_ordinal>
+function, which returns true if passed an ordinal number.
+
+=head1 REPOSITORY
+
+L<https://github.com/neilbowers/Lingua-EN-Numbers-Ordinate>
+
 =head1 COPYRIGHT
 
 Copyright (c) 2000 Sean M. Burke.  All rights reserved.
@@ -167,6 +180,7 @@ sub ordinate ($) {
   return $i . ordsuf($i);
 }
 
+no warnings 'all';
 *th = \&ordinate; # correctly copies the prototype, too.
 
 ###########################################################################
