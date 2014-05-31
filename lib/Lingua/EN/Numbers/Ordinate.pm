@@ -1,5 +1,5 @@
 package Lingua::EN::Numbers::Ordinate;
-$Lingua::EN::Numbers::Ordinate::VERSION = '1.02_01';
+$Lingua::EN::Numbers::Ordinate::VERSION = '1.03';
 # ABSTRACT: go from cardinal number (3) to ordinal ("3rd")
 
 use 5.006;
